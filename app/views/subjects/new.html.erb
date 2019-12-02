@@ -1,0 +1,25 @@
+<h2>Create a new subject for people to vote on!</h2>
+
+<%= form_for @subject do |f| %>
+    <%=f.label :title%>
+    <%=f.text_field :title%><br>
+    
+    <%= f.label :description%>
+    <%=f.text_area :description%> <br>
+
+
+    <p>Category:</p>
+    <%=f.label :category, "Would You Rather" %>
+    <%=f.radio_button :category, "Would You Rather", value: "Would You Rather" %> <br>
+    
+    <%=f.label :category, "Who's right?"%>
+    <%=f.radio_button :category, "Who's right?", value: "Who's right?"%><br>
+    
+    <%=f.label :category, "politics"%>
+    <%=f.radio_button :category, "politics", value: "politics"%><br>
+
+    <%=f.submit%>
+
+    #create nested attributes to create options
+
+<% end %>
