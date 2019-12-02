@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_02_143057) do
+ActiveRecord::Schema.define(version: 2019_12_02_155723) do
 
   create_table "options", force: :cascade do |t|
     t.string "description"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_143057) do
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
+    t.string "name"
   end
 
   create_table "votes", force: :cascade do |t|
