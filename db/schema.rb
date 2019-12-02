@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_02_135446) do
+ActiveRecord::Schema.define(version: 2019_12_02_143057) do
 
   create_table "options", force: :cascade do |t|
     t.string "description"
-    t.integer "subject_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.integer "subject_id", null: false
+    t.index ["subject_id"], name: "index_options_on_subject_id"
   end
 
   create_table "subjects", force: :cascade do |t|
@@ -24,23 +23,22 @@ ActiveRecord::Schema.define(version: 2019_12_02_135446) do
     t.string "description"
     t.string "category"
     t.string "winning"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "votes", force: :cascade do |t|
     t.string "option_choice"
-    t.integer "user_id"
-    t.integer "subject_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id", null: false
+    t.integer "subject_id", null: false
+    t.index ["subject_id"], name: "index_votes_on_subject_id"
+    t.index ["user_id"], name: "index_votes_on_user_id"
   end
 
+  add_foreign_key "options", "subjects"
+  add_foreign_key "votes", "subjects"
+  add_foreign_key "votes", "users"
 end
