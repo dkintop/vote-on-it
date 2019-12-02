@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'clean_blog/index'
   get '/' => "sessions#welcome"
   get '/login' => "sessions#new"
   post '/login' => "sessions#login"

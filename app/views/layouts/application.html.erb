@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Latest compiled and minified CSS -->
+    
     <title>VoteOnIt</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,15 +11,21 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-<%if session[:user_id]%>
-  <nav>
+<body>
+  <header>
+  <nav class= "topnav">
+    <ul>
+      <%if session[:user_id]%>
+        <li><%=link_to "Log Out", logout_path, method: :delete%></li>
+    
   
-  <%=link_to "Log Out", logout_path, method: :delete%>
-   
+        <li><%=link_to "Create New Subject", new_subject_path%> </li>
+      <%end%>
+    </ul>
   </nav>
-<%end%>
+  </header>
  
-  <body>
-    <%= yield %>
+  
+  <%= yield %>
   </body>
 </html>
