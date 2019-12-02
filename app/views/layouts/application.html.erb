@@ -9,6 +9,14 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<%if session[:user_id]%>
+  <nav>
+  
+  <%=link_to "Log Out", logout_path, method: :delete%>
+   
+  </nav>
+<%end%>
+ 
   <body>
     <%= yield %>
   </body>
