@@ -1,7 +1,12 @@
-This is a show page for the subject
-<%=@subject.title%>
-<%=@subject.category.title%>
-<%=@subject.description%>
-<%=@subject.option_1%>
-<%=@subject.option_1%>
-<<test>>
+
+<h1><%=@subject.title%></h1>
+
+<h3>Category: <%=@subject.category.title%></h3>
+<p><%=@subject.description%></p>
+
+
+<div class= "link"> <%= link_to  "Vote Now!", new_subject_vote_path(@subject) %> </div>
+
+
+
+#want to display a percentage of how many votes have been voted for each option

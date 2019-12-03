@@ -12,7 +12,7 @@ class SubjectsController < ApplicationController
     end
       #the above block was necessary to prevent assigning and creating a blank category
     if @subject.save
-      redirect_to user_path(current_user)
+      redirect_to new_subject_vote_path(@subject)
     else
       render :new
     end

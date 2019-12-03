@@ -10,7 +10,7 @@
    <div class= 'index_item'>
 
    
-   <h3> <%=subject.title%></h3>
+   <h3> <%= link_to  "#{subject.title}", subject_path(subject) %></h3>
 
    <div class="vote_link"><%= link_to  "Vote!", new_subject_vote_path(subject.id) %></div>
     

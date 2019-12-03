@@ -87,4 +87,16 @@ body {
 }
 
 
+.link{
+    background-color: lightslategray;
+    position: relative;
+    padding: 4px;
+    text-align: center;
+    width: fit-content;
+}
 
+.link a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
