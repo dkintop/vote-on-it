@@ -5,4 +5,5 @@ class Subject < ApplicationRecord
     
     validates :title, presence: true
     validates :description, presence: true
+    accepts_nested_attributes_for :category
 end

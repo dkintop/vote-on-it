@@ -1,1 +1,47 @@
-create new subjects
+<h2> Create New Subject for people to vote on!</h2>
+
+<%= form_for @subject do |f| %>
+    <div>
+        <%=f.label :title %>
+        <%=f.text_field :title%>
+    </div><br>
+    
+    <div>
+        <%=f.label :description%>
+        <%=f.text_area :description%>
+    </div><br>
+    
+    <div>
+        <%=f.label :option_1%>
+        <%=f.text_field :option_1%>
+    </div><br>
+    
+    <div>
+        <%=f.label :option_2%>
+        <%=f.text_field :option_2%>
+    </div><br>
+    
+    <p>Select A Category</p>
+    
+    <div>
+        <%=f.collection_select :category_id,  Category.all, :id, :title  %>
+    </div>
+
+    <p> Create a new Category</p>
+    <div>
+        <%=f.fields_for :category do |c|%>
+
+            <%=c.label :title%>
+            <%=c.text_field :title%>
+
+        <%end%>
+    </div>
+
+
+    <%= f.submit %>
+<% end %>
+        
+    
+
+    
+
