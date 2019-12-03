@@ -57,7 +57,19 @@
     
 }
 
+.index_item .vote_link{
+    background-color: lightslategray;
+    position: relative;
+    padding: 4px;
+    text-align: center;
+    width: fit-content;
+}
 
+.index_item .vote_link a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
 
 body {
     background-color: lightsteelblue;

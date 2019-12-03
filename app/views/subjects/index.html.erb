@@ -6,9 +6,14 @@
 <%@subjects.each do |subject|%>
    
 
-   <%= link_to  "Vote!", new_subject_review_path() %>
+   
    <div class= 'index_item'>
+
+   
    <h3> <%=subject.title%></h3>
+
+   <div class="vote_link"><%= link_to  "Vote!", new_subject_vote_path(subject.id) %></div>
+    
     <p>Category: <%=subject.category.title%><p>
     </div>
 
