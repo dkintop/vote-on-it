@@ -23,6 +23,10 @@ class SubjectsController < ApplicationController
     @subjects = Subject.all
   end
 
+  def show 
+    @subject = Subject.find_by_id(params[:id])
+  end
+
   private 
 
   def subject_params
