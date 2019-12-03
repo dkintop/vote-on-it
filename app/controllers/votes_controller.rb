@@ -19,7 +19,12 @@ class VotesController < ApplicationController
     end
 
     def index
+        if params[:subject_id]
+            @subject = Subject.find_by_id(params[:subject_id])
+            @votes = @subject.votes
+        else
         @votes = Vote.all
+        end
     end
 
     private 
