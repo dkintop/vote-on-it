@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   delete '/logout' => 'sessions#destroy'
   resources :categories
-  
+  resources :votes
   resources :subjects do 
       resources :votes, only: [:new, :index]
   end

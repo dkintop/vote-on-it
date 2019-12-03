@@ -1,1 +1,26 @@
-new vote page
+<h1> Vote Now!! </h1>
+    
+
+<h2> <%=@subject.title%></h2>
+
+<p> <%=@subject.description%> </p>
+
+<p> Choose an option and click submit to vote</p>
+
+<%= form_for @vote do |f| %>
+    
+    <div class= "vote_option">
+        <%=f.label :option_1, @subject.option_1%>
+        <%=f.radio_button :option_choice, @subject.option_1 %>
+    </div>
+
+    <div class= "vote_option">
+        <%=f.label :option_2, @subject.option_2%>
+        <%=f.radio_button :option_choice,       @subject.option_2 %>
+    </div>
+
+    <%=f.submit "Submit Vote"%>
+<%end%>
+
+
+        
