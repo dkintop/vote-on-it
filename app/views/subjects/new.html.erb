@@ -23,21 +23,24 @@
         <%=f.text_field :option_2%>
     </div><br>
     
-    <p>Select A Category</p>
     
-    <div>
-        <%=f.collection_select :category_id,  Category.all, :id, :title  %>
-    </div>
+    
+   
 
-    <p> Create a new Category</p>
-    <div>
+    <p> Select Category or Create a new one</p>
+    
         <%=f.fields_for :category do |c|%>
-
+        
+        <div>
+        <%=f.collection_select :category_id,  Category.all, :id, :title  %>
+        </div>
+        
+        <div>
             <%=c.label :title%>
             <%=c.text_field :title%>
-
+        </div>
         <%end%>
-    </div>
+    
 
 
     <%= f.submit %>

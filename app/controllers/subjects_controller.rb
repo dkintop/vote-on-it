@@ -7,12 +7,20 @@ class SubjectsController < ApplicationController
 
   def create 
     @subject = Subject.new(subject_params)
-    
+    if subject_params[:category_attributes][:title].blank?
+      @subject.category = Category.find(subject_params[:category_id])
+    end
+    binding.pry
     if @subject.save
       redirect_to user_path(current_user)
     else
       render :new
     end
+  end
+
+  def index 
+    #subjects_path
+    @subjects = Subject.all
   end
 
   private 
