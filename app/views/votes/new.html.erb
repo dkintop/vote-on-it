@@ -7,6 +7,8 @@
 
 <p> Choose an option and click submit to vote</p>
 
+<p><%=error_messages%></p>
+
 <%= form_for @vote do |f| %>
     
     <div class= "vote_option">
@@ -19,6 +21,9 @@
         <%=f.radio_button :option_choice,       @subject.option_2 %>
     </div>
 
+    <%=f.hidden_field :subject_id, value: @subject.id%>
+    <%= f.hidden_field :user_id, value: current_user.id%>
+    
     <%=f.submit "Submit Vote"%>
 <%end%>
 

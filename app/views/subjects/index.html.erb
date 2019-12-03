@@ -5,6 +5,8 @@
 
 <%@subjects.each do |subject|%>
    
+
+   <%= link_to  "Vote!", new_subject_review_path() %>
    <div class= 'index_item'>
    <h3> <%=subject.title%></h3>
     <p>Category: <%=subject.category.title%><p>

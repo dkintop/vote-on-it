@@ -8,7 +8,7 @@ def error_messages
     @subject.errors.full_messages.each do |message|
     
         message
-        binding.pry
+        
         end
     end
 end
