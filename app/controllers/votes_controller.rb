@@ -19,7 +19,7 @@ class VotesController < ApplicationController
     end
 
     def index
-
+        @votes = Vote.all
     end
 
     private 
