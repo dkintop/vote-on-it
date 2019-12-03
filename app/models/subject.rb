@@ -6,6 +6,8 @@ class Subject < ApplicationRecord
     accepts_nested_attributes_for :category
 
 
+    
+
     def options
         options = []
         options << self.option_1
