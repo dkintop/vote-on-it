@@ -10,6 +10,8 @@ class SubjectsController < ApplicationController
     
     if @subject.save
       redirect_to user_path(current_user)
+    else
+      render :new
     end
   end
 
