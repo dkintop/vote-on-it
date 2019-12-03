@@ -10,7 +10,7 @@ class SubjectsController < ApplicationController
     if subject_params[:category_attributes][:title].blank?
       @subject.category = Category.find(subject_params[:category_id])
     end
-    binding.pry
+      #the above block was necessary to prevent assigning and creating a blank category
     if @subject.save
       redirect_to user_path(current_user)
     else

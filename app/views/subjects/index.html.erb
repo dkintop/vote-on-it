@@ -1,9 +1,15 @@
-list of all subjects here:
+<h1> All Subjects </h1>
 
 
+    
 
 <%@subjects.each do |subject|%>
+   
+   <div class= 'index_item'>
    <h3> <%=subject.title%></h3>
     <p><%=subject.category.title%><p>
+    </div>
 
 <%end%>
+
+
