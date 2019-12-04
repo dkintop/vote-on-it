@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     
     def show 
         @user = User.find_by_id(params[:id])
+        @votes = Vote.for_user(current_user.id)
     end
 
     

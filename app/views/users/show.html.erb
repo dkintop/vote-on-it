@@ -1,2 +1,6 @@
 <h1> Welcome <%=current_user.name.capitalize%></h1>
-<%=current_user.email%>
+
+<h2> Your Votes: </h2>
+
+<%=render 'votes/votes_index'%>
+

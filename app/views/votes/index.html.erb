@@ -5,15 +5,4 @@
 
 
 
-<%@votes.each do |vote|%>
-    <div class='index_item'>
-    
-    <h3><%=vote.subject.title%><h3>
-    <p> <%=vote.user.name%> voted: <%=vote.option_choice%></p>
-    <div class='vote_link'>
-        <%=link_to "View Subject", subject_path(vote.subject)%>
-    </div>
-    
-    </div>
-
-    <%end%>
+<%= render 'votes_index'%>
