@@ -10,11 +10,9 @@ class Subject < ApplicationRecord
     def option_1_count
         count = 0
         Vote.for_subject(self).each do |vote|
-           
-            if vote.option_choice == self.option_1
+           if vote.option_choice == self.option_1
                 count += 1
            end
-           
         end
         count
     end
@@ -22,11 +20,9 @@ class Subject < ApplicationRecord
      def option_2_count
         count = 0
         Vote.for_subject(self).each do |vote|
-           
-            if vote.option_choice == self.option_2
+           if vote.option_choice == self.option_2
                 count += 1
            end
-           
         end
         count
     end
@@ -41,13 +37,23 @@ class Subject < ApplicationRecord
         end
     end
 
-
-
-
     def options
         options = []
         options << self.option_1
         options << self.option_2
         return options 
     end
+
+    def option_1_percentage
+        total_votes = self.votes.count
+        percentage = (self.option_1_count / total_votes.to_f) * 100
+        percentage.to_i 
+    end
+
+    def option_2_percentage
+        total_votes = self.votes.count
+        percentage = (self.option_2_count / total_votes.to_f) * 100
+        percentage.to_i 
+    end
+
 end

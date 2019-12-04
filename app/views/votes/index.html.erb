@@ -2,6 +2,8 @@
 <%if params[:subject_id]%>
     <h3>Thanks For Voting! See how others voted:</h3>
     <p> Winning: <%= @subject.winning %> </p>
+    <p> option 1: <%= @subject.option_1_percentage%>%</p>
+    <p> option 2: <%=@subject.option_2_percentage%>%</p>
 <%end%>
 
 
