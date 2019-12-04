@@ -32,7 +32,13 @@ class Subject < ApplicationRecord
     end
 
     def winning
-        
+        if self.option_1_count > self.option_2_count
+            self.option_1
+        elsif self.option_2_count > self.option_1_count
+            self.option_2
+        else
+            "Tied!"
+        end
     end
 
 
