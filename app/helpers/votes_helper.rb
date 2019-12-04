@@ -1,6 +1,6 @@
 module VotesHelper
 
-    def vote_error_messages
+def vote_error_messages
     
     if @vote.errors.any?
     @vote.errors.full_messages.each do |message|
@@ -10,5 +10,10 @@ module VotesHelper
         end
     end
 end
+
+
+
+
+
 
 end

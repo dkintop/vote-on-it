@@ -8,7 +8,7 @@
 <p> Choose an option and click submit to vote</p>
 
 <p><%=vote_error_messages%></p>
-
+<p><%= flash[:error]%></p>
 <%= form_for @vote do |f| %>
     
     <div class= "vote_option">

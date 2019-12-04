@@ -10,7 +10,14 @@ class VotesController < ApplicationController
 
     def create 
        @vote = Vote.new(vote_params)
-       if @vote.save
+       
+        if !user_voted?
+            @vote.save
+        else
+            flash[:error] = "You already voted on this subject. Please navigate to a different page." #this block checks if the user has already voted on this subject and saves vote if the user has not voted.
+        end    
+        
+        if @vote.id
         redirect_to subject_votes_path(@vote.subject_id)
        else
         @subject = Subject.find_by_id(vote_params[:subject_id])
@@ -31,6 +38,15 @@ class VotesController < ApplicationController
 
     def vote_params
         params.require(:vote).permit(:option_choice, :subject_id, :user_id)
+    end
+
+
+    def user_voted?
+        if @vote.subject.users.include?(current_user)
+            true
+        else
+            false
+        end
     end
 
 end
