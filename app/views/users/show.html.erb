@@ -2,11 +2,10 @@
 
 <p> Things to add: </p> 
     <ul>
-        <li>on user show page index items, display 'winning' or 'losing' based on wether or not the users chosen option has the majority       of votes</li>
         <li>on user show page create link to a nested subjects index rote that displays only subjects the user has not voted on</li>
     </ul>
 <h2> Subjects You Voted On: </h2> 
-
+<p>See <%= link_to  "Subjects You Have Not Voted On", user_subjects_path(current_user) %>
 <%=render 'votes/votes_index'%>
 
 

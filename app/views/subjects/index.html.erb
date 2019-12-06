@@ -1,5 +1,9 @@
-<h1> All Subjects </h1>
 
+<%if params[:user_id]%>
+    <h1> Subjects Awaiting Your Vote!</h1>
+<%else%>
+    <h1> All Subjects </h1>
+<%end%>
 
 <%= render 'subjects_index'%>
 

@@ -5,7 +5,17 @@ class Subject < ApplicationRecord
     validates :title, :option_1, :option_2, :description, presence: true
     accepts_nested_attributes_for :category
 
+    #scope :for_user, ->(user_id) {where("user_id = ?", user_id)}
 
+    def self.not_voted(current_user) #returns collection of subjects that the current user has not voted on
+        not_voted = []
+        self.all.each do |subject|
+            if !subject.users.include?(current_user)
+                not_voted << subject
+            end 
+        end
+        not_voted
+    end
     
     def option_1_count
         count = 0

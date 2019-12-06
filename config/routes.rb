@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   resources :subjects do 
       resources :votes, only: [:new, :index]
   end
-  resources :users
+  resources :users do
+      resources :subjects, only: [:index]
+  end
 
   get '/auth/google_oauth2/callback' => 'sessions#omniauth'
 
