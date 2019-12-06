@@ -66,4 +66,12 @@ class Subject < ApplicationRecord
         percentage.to_i 
     end
 
+    def chart_data
+        chart_data = []
+        chart_data << [self.option_1, self.option_1_count]
+        chart_data << [self.option_2, self.option_2_count]
+        chart_data
+
+    end
+
 end

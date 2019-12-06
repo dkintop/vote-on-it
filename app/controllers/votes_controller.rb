@@ -23,10 +23,11 @@ class VotesController < ApplicationController
        end
     end
 
-    def index
+    def index #this is the action you are working in with your chart
         if params[:subject_id]
             @subject = Subject.find_by_id(params[:subject_id])
             @votes = @subject.votes
+            @chart_data = @subject.chart_data
             flash[:duplicate_vote_error] = nil #clears this error from being repeated. 
         else
             @votes = Vote.all
