@@ -27,7 +27,7 @@ class VotesController < ApplicationController
         if params[:subject_id]
             @subject = Subject.find_by_id(params[:subject_id])
             @votes = @subject.votes
-            flash[:duplicate_vote_error] = nil #clears this error from being repeated. Problem with this logic is it only clears it if the user visits the index page. is there a way to set it equal to nil upon navigating to a different page without hardcoding this line into every controller action?
+            flash[:duplicate_vote_error] = nil #clears this error from being repeated. 
         else
             @votes = Vote.all
         end

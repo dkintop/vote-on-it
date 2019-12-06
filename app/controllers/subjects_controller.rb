@@ -22,7 +22,6 @@ class SubjectsController < ApplicationController
     if params[:user_id]
       @subjects = Subject.not_voted(current_user)
     else
-      
       @subjects = Subject.all
     end
   end
@@ -37,4 +36,4 @@ class SubjectsController < ApplicationController
     params.require(:subject).permit(:title, :description, :option_1, :option_2, :category_id, category_attributes:[:title])
   end
 
-  end
+end
