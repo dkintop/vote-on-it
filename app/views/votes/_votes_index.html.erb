@@ -1,6 +1,7 @@
 <%@votes.each do |vote|%>
     <div class='index_item'>
     
+
         <h3><%=vote.subject.title%><h3>
         <p> <%=vote.user.name%> voted: <%=vote.option_choice%></p>
         <P> Winning: <%=vote.subject.winning%>
@@ -10,4 +11,4 @@
     
     </div>
 
-    <%end%>
+<%end%>

@@ -1,11 +1,10 @@
 <h1> Welcome <%=current_user.name.capitalize%></h1>
 
-<p> Things to add: </p> 
-    <ul>
-        <li>on user show page create link to a nested subjects index rote that displays only subjects the user has not voted on</li>
-    </ul>
-<h2> Subjects You Voted On: </h2> 
-<p>See <%= link_to  "Subjects You Have Not Voted On", user_subjects_path(current_user) %>
+
+<h2> Your Votes: </h2> 
+<p>See <%= link_to  "New Subjects", user_subjects_path(current_user) %>
+
+
 <%=render 'votes/votes_index'%>
 
 
