@@ -8,7 +8,13 @@
 <p> Choose an option and click submit to vote</p>
 
 <p><%=vote_error_messages%></p>
-<p><%= flash[:error]%></p>
+
+    <%if flash[:duplicate_vote_error]%>
+<p><%= flash[:duplicate_vote_error]%>- <%= link_to  "See Votes", subject_votes_path(@vote.subject_id) %></p>
+    <%end%>
+
+
+
 <%= form_for @vote do |f| %>
     
     <div class= "vote_option">

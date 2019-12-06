@@ -1,5 +1,7 @@
 <h1>Sign Up</h1>
 
+<%=user_error_messages%>
+
 <%= form_for @user  do |f| %>
     <%= f.label :email  %>
     <%=f.email_field :email%>

@@ -1,0 +1,13 @@
+
+[1mFrom:[0m /mnt/c/users/owner/dev/flatiron/projects/vote-on-it/app/controllers/sessions_controller.rb @ line 32 SessionsController#omniauth:
+
+    [1;34m27[0m: [32mdef[0m [1;34momniauth[0m
+    [1;34m28[0m:     @user = [1;34;4mUser[0m.find_or_create_by([35memail[0m: auth[[33m:email[0m]) 
+    [1;34m29[0m: 
+    [1;34m30[0m:     @user.password = [1;34;4mSecureRandom[0m.hex
+    [1;34m31[0m:     @user.save        
+ => [1;34m32[0m:     binding.pry
+    [1;34m33[0m:     session[[33m:user_id[0m] = @user.id
+    [1;34m34[0m:     redirect_to user_path(@user)
+    [1;34m35[0m: [32mend[0m
+

@@ -57,3 +57,9 @@ gem 'pry'
 
 gem 'jquery-rails'
 gem 'bootstrap-sass'
+
+
+#google ommniauth
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'dotenv-rails'

@@ -32,7 +32,7 @@
         <%=f.fields_for :category do |c|%>
         
         <div>
-        <%=f.collection_select :category_id,  Category.all, :id, :title  %>
+            <%=f.collection_select :category_id,  Category.all, :id, :title  %>
         </div>
         
         <div>

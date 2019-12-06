@@ -10,7 +10,7 @@ class SubjectsController < ApplicationController
     if subject_params[:category_attributes][:title].blank?
       @subject.category = Category.find(subject_params[:category_id])
     end
-      #the above block was necessary to prevent assigning and creating a blank category
+      #lines 10-12 were necessary to prevent assigning and creating a blank category
     if @subject.save
       redirect_to new_subject_vote_path(@subject)
     else
@@ -18,8 +18,7 @@ class SubjectsController < ApplicationController
     end
   end
 
-  def index 
-    #subjects_path
+  def index #subjects_path
     @subjects = Subject.all
   end
 
