@@ -1,23 +1,8 @@
 <h1> All Subjects </h1>
 
 
-    
+<%= render 'subjects_index'%>
 
-<%@subjects.each do |subject|%>
-   
 
-   
-    <div class= 'index_item'>
-
-   
-        <h3 class= 'subjects_title'> <%= link_to  "#{subject.title}", subject_path(subject) %></h3>
-
-        <div class="vote_link"><%= link_to  "Vote!", new_subject_vote_path(subject.id) %></div>
-    
-        <p>Category: <%=subject.category.title%><p>
-   
-    </div>
-
-<%end%>
 
 
