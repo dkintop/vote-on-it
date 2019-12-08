@@ -18,7 +18,7 @@ class SubjectsController < ApplicationController
     end
   end
 
-  def index #subjects_path or #user_subjects_path(user)
+  def index 
     if params[:user_id]
       @subjects = Subject.not_voted(current_user)
     else
