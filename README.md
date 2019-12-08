@@ -24,7 +24,7 @@ To run this application on your local machine:
 Doug Kintop 
 
 ## License
-This Project is licensed under the MIT License see the LICENSE.md file for details 
+This Project is licensed under the MIT License see the  [LICENSE.md](LICENSE.md) file for further information.
 
 
 
