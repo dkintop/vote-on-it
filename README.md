@@ -14,6 +14,7 @@ System Requirements:
 ## Running the application
 To run this application on your local machine: 
 * clone this repository into a local directory on your machine
+* run 'bundle install' command in terminal to install gem dependencies
 * run 'rails s' command in terminal and navigate to localhost:3000 in your web browser to run the application on the rails development server.
 
 ## Built With
