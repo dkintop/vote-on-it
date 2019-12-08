@@ -1,9 +1,8 @@
-# README
+# Vote On It
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+    This is a ruby on rails web application that allow users to create A subject with two options that allows the user and other users to vote on that subject and then view the results of the poll.
+## Getting Started
 
-Things you may want to cover:
 
 * Ruby version
 
@@ -22,5 +21,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-# vote-on-it
-# vote-on-it
+
