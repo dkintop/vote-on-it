@@ -8,13 +8,7 @@ class VotesController < ApplicationController
 
     def create 
        @vote = Vote.new(vote_params)
-       
-        if !user_voted?
-            @vote.save
-        else
-            flash[:duplicate_vote_error] = "You already voted on this subject. click here to see votes." #this block checks if the user has already voted on this subject and saves vote if the user has not voted.
-        end    
-        
+       save_if_user_has_not_voted #see private
         if @vote.id #calling @vote.id returns false or nil if !@vote.save 
             redirect_to subject_votes_path(@vote.subject_id)
        else
@@ -23,7 +17,7 @@ class VotesController < ApplicationController
        end
     end
 
-    def index #this is the action you are working in with your chart
+    def index 
         if params[:subject_id]
             @subject = Subject.find_by_id(params[:subject_id])
             @votes = @subject.votes
@@ -41,8 +35,14 @@ class VotesController < ApplicationController
     end
 
 
-    def user_voted?
-         @vote.subject.users.include?(current_user)
+    
+
+    def save_if_user_has_not_voted
+        if !@vote.subject.users.include?(current_user)
+            @vote.save
+        else
+            flash[:duplicate_vote_error] = "You already voted on this subject. click here to see votes." #this block checks if the user has already voted on this subject and saves vote if the user has not voted.
+        end 
     end
 
 end
