@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     
     def show 
         @user = User.find_by_id(params[:id])
-        @votes = Vote.for_user(current_user.id) #for user is a scope method defined in models/vote.rb
+        @votes = Vote.for_user(current_user.id) #for_user is a scope method defined in models/vote.rb
     end
 
     

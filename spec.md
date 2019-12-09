@@ -3,24 +3,24 @@
 Specs:
 
 - [x] Using Ruby on Rails for the project
-- [ ] Include at least one has_many relationship (x has_many y; e.g. User has_many Recipes)
-- [ ] Include at least one belongs_to relationship (x belongs_to y; e.g. Post belongs_to User)
-- [ ] Include at least two has_many through relationships (x has_many y through z; e.g. Recipe has_many Items through Ingredients)
-- [ ] Include at least one many-to-many relationship (x has_many y through z, y has_many x through z; e.g. Recipe has_many Items through Ingredients, Item has_many Recipes through Ingredients)
-- [ ] The "through" part of the has_many through includes at least one user submittable attribute, that is to say, some attribute other than its foreign keys that can be submitted by the app's user (attribute_name e.g. ingredients.quantity)
-- [ ] Include reasonable validations for simple model objects (list of model objects with validations e.g. User, Recipe, Ingredient, Item)
-- [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
-- [ ] Include signup (how e.g. Devise)
-- [ ] Include login (how e.g. Devise)
-- [ ] Include logout (how e.g. Devise)
-- [ ] Include third party signup/login (how e.g. Devise/OmniAuth)
-- [ ] Include nested resource show or index (URL e.g. users/2/recipes)
-- [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
-- [ ] Include form display of validation errors (form URL e.g. /recipes/new)
+- [x] Include at least one has_many relationship (Category has_many Subjects)
+- [x] Include at least one belongs_to relationship (Subjects belongs_to Category)
+- [x] Include at least two has_many through relationships (User has_many Subjects through Votes, Subject has many Users through votes)
+- [x] Include at least one many-to-many relationship (see above)
+- [x] The "through" part of the has_many through includes at least one user submittable attribute, that is to say, some attribute other than its foreign keys that can be submitted by the app's user (attribute_name e.g. category.title)
+- [x] Include reasonable validations for simple model objects (see models)
+- [x] Include a class level ActiveRecord scope method (Vote class, Vote.for_user, as seen on user show page at /users/:id)
+- [x] Include signup (custom)
+- [x] Include login (custom)
+- [x] Include logout (custom)
+- [x] Include third party signup/login (self written, standard omniauth using google-oauth_2)
+- [x] Include nested resource show or index (users/:user_id/subjects)
+- [x] Include nested resource "new" form (/subjects/:subject_id/votes/new)
+- [x] Include form display of validation errors (subjects/new)
 
 Confirm:
 
-- [ ] The application is pretty DRY
-- [ ] Limited logic in controllers
-- [ ] Views use helper methods if appropriate
-- [ ] Views use partials if appropriate
+- [x] The application is pretty DRY
+- [x] Limited logic in controllers
+- [x] Views use helper methods if appropriate
+- [x] Views use partials if appropriate

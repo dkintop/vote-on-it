@@ -9,7 +9,7 @@ class VotesController < ApplicationController
     def create 
        @vote = Vote.new(vote_params)
        save_if_user_has_not_voted #see private
-        if @vote.id #calling @vote.id returns false or nil if !@vote.save 
+        if @vote.id #calling @vote.id returns false or nil if @vote did not save to DB
             redirect_to subject_votes_path(@vote.subject_id)
        else
             @subject = Subject.find_by_id(vote_params[:subject_id])
