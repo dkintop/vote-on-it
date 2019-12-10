@@ -11,7 +11,7 @@
     data = google.visualization.arrayToDataTable(data);
     var options = {
       chart: {
-        title: 'Total Votes',
+        title: 'Total Votes: ' + <%= @votes.count %>,
       }
     };
 
