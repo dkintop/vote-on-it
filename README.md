@@ -1,6 +1,10 @@
 # Vote On It
 
-This is a ruby on rails web application that allow users to create A subject with two options that allows the user and other users to vote on that subject and then view the results of the poll. video demo: https://www.youtube.com/watch?v=IMP8_G2Pu6k&t=387s
+This is a ruby on rails web application that allow users to create A subject with two options that allows the user and other users to vote on that subject and then view the results of the poll. video demo:
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=IMP8_G2Pu6k
+" target="_blank"><img src="http://img.youtube.com/vi/IMP8_G2Pu6k/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 ## Getting Started:
 To get this application up and running for further development on your local machine, follow these instruction:
