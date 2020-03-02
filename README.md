@@ -1,6 +1,6 @@
 # Vote On It
 
-This is a ruby on rails web application that allow users to create A subject with two options that allows the user and other users to vote on that subject and then view the results of the poll.
+This is a ruby on rails web application that allow users to create A subject with two options that allows the user and other users to vote on that subject and then view the results of the poll. video demo: https://github.com/dkintop/vote-on-it
 
 ## Getting Started:
 To get this application up and running for further development on your local machine, follow these instruction:
